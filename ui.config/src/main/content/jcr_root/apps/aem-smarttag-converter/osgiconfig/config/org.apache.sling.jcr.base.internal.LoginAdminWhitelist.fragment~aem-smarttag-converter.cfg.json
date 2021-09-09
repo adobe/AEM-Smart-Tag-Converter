@@ -1,0 +1,4 @@
+{
+    "whitelist.name": "Smart Tag Converter",
+    "whitelist.bundles": "aem-smarttag-converter.core"
+}

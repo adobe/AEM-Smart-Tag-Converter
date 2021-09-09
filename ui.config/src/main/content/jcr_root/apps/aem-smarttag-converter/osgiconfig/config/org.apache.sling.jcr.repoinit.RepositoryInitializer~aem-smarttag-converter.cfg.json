@@ -1,0 +1,10 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/aem-smarttag-converter",
+        "create path (nt:unstructured) /content/dam/aem-smarttag-converter/jcr:content",
+        "set properties on /content/dam/aem-smarttag-converter/jcr:content",
+        "set cq:conf{String} to /conf/aem-smarttag-converter",
+        "set jcr:title{String} to \"AEM SmartTag Converter\"",
+        "end"
+    ]
+}

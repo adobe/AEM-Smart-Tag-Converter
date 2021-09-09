@@ -1,0 +1,33 @@
+
+ソースコードの解説
+
+
+
+
+# ui.content
+- content/dam/aem-smarttag-converter/mydict.csv
+- META-INF/vault/filter.xml
+<filter root="/content/dam/aem-smarttag-converter/mydict.csv" mode="merge"/>
+
+
+# ui.config
+- src/main/content/jcr_root/apps/aem-smarttag-converter/osgiconfig
+## com.adobe.aem.smarttag_converter.core.services.impl.SmartTagConverterDictionaryServiceImpl.cfg.json
+	Convert Enable
+	Dictionary Name
+
+## org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment~smarttag-converter.cfg.json
+	whitelist.name: "Smart Tag Converter"
+	whitelist.bundles: "aem-smarttag-converter.core"
+
+
+
+
+### TODO ###
+- Workflow Modelを作成して動作させる
+- Smart Tagが終わった後に動作させるサンプルも作成する
+
+- loginAdministrativeを使わずに動作させる
+	# whitelisted to use SlingRepository.loginAdministrative
+
+

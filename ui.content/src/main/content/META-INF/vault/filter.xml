@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/aem-smarttag-converter" mode="merge"/>
+    <!-- <filter root="/content/aem-smarttag-converter" mode="merge"/> -->
+    <filter root="/content/dam/aem-smarttag-converter" mode="merge"/>
+    <filter root="/content/dam/aem-smarttag-converter/sample-kyoto.JPG" mode="merge"/>
+    <filter root="/content/dam/aem-smarttag-converter/sample-dictionary.csv" mode="merge"/>
+    <!-- <filter root="/content/experience-fragments/aem-smarttag-converter" mode="merge"/> -->
+
+    <filter root="/conf/global" mode="merge"/>
+    <filter root="/conf/global/settings" mode="merge"/>
+    <filter root="/conf/global/settings/workflow" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models" mode="merge"/>
+    <filter root="/conf/global/settings/workflow/models/smart-tag-converter-sample-workflow" mode="merge"/>
+    <!-- <filter root="/var/workflow/models" mode="merge"/> -->
+    <filter root="/var/workflow" mode="merge"/>
+    <filter root="/var/workflow/models" mode="merge"/>
+    <filter root="/var/workflow/models/smart-tag-converter-sample-workflow" mode="merge"/>    
+</workspaceFilter>
