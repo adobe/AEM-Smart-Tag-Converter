@@ -1,8 +1,20 @@
+/*
+Copyright 2021 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 /* 
 // == Smart Tag Convert Test Servlet ==
+// Test Servlet for Dictionary Service
 // Sample request:
 // GET "http://localhost:4502/bin/smartTagConverter?tag=word"
-// Dict Serviceの動作テストと更新よう
 */
 package com.adobe.aem.smarttag_converter.core.servlets;
 

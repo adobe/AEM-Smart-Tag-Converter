@@ -56,6 +56,12 @@
                     <embeddeds>
                         <embedded>
                             <groupId>com.adobe.aem.smarttag_converter</groupId>
+                            <artifactId>aem-smarttag-converter.ui.config</artifactId>
+                            <type>zip</type>
+                            <target>/apps/aem-smarttag-converter-packages/application/install/19</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.aem.smarttag_converter</groupId>
                             <artifactId>aem-smarttag-converter.core</artifactId>
                             <target>/apps/aem-smarttag-converter-packages/application/install</target>
                         </embedded>
@@ -64,12 +70,6 @@
                             <artifactId>aem-smarttag-converter.ui.content</artifactId>
                             <type>zip</type>
                             <target>/apps/aem-smarttag-converter-packages/content/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem.smarttag_converter</groupId>
-                            <artifactId>aem-smarttag-converter.ui.config</artifactId>
-                            <type>zip</type>
-                            <target>/apps/aem-smarttag-converter-packages/application/install</target>
                         </embedded>
                     </embeddeds>
                 </configuration>
@@ -174,13 +174,13 @@
     <dependencies>
         <dependency>
             <groupId>com.adobe.aem.smarttag_converter</groupId>
-            <artifactId>aem-smarttag-converter.ui.content</artifactId>
+            <artifactId>aem-smarttag-converter.ui.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.adobe.aem.smarttag_converter</groupId>
-            <artifactId>aem-smarttag-converter.ui.config</artifactId>
+            <artifactId>aem-smarttag-converter.ui.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
