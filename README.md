@@ -1,10 +1,5 @@
 # AEM Smart Tag Converter
 
-
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
-
-
-## Use Case
 Sometime AEM user wants to convert smart tags which are attached by AEM into other tags.
 e.g
  cousin -> cooking
