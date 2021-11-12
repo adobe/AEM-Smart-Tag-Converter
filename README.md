@@ -1,6 +1,6 @@
 # AEM Smart Tag Converter
 
-Sometime AEM user wants to convert smart tags into other tags to improve searchablility.
+Sometime AEM user wants to convert smart tags into other tags to improve searchability.
 
 Example:
 - cuisine -> cooking
