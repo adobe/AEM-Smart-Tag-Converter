@@ -27,10 +27,10 @@ import org.osgi.service.metatype.annotations.Designate;
 
 import java.io.StringReader;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.apache.commons.lang.StringEscapeUtils;
 
 @Component(service = SmartTagConverterDictionaryService.class, immediate = true)
 @Designate(ocd = SmartTagConverterDictionaryConfig.class)
@@ -51,15 +51,16 @@ public class SmartTagConverterDictionaryServiceImpl implements SmartTagConverter
 
     boolean enable = configuration.enableConfig();
     String dictionaryName = configuration.getDictionaryName();
-    log.info(" __________ dictionaryName:" + dictionaryName + " enabled:"+enable);
+    log.info(" __________ dictionaryName:" + dictionaryName + " enabled:" + enable);
 
-    if (enable) importDictionary();
+    if (enable)
+      importDictionary();
   }
 
   @Override
-  public String getConvertedString (String tag){
+  public String getConvertedString(String tag) {
     String translated = this.dictionary.get(tag);
-    return (translated!=null)?translated:tag;
+    return (translated != null) ? translated : StringEscapeUtils.escapeJavaScript(tag);
   }
 
   @Override
@@ -70,23 +71,21 @@ public class SmartTagConverterDictionaryServiceImpl implements SmartTagConverter
 
     this.dictionary = new HashMap<String, String>();
     try {
-      String line = br.readLine();		// skip first HEADER　line
+      String line = br.readLine(); // skip first HEADER line
       while ((line = br.readLine()) != null) {
-        log.info("_____■■■■■■■■■■■ line _____ {} _____■■■■■■■■■■■",line);
-        if ( !line.isEmpty() ){
+        log.info("_____■■■■■■■■■■■ line _____ {} _____■■■■■■■■■■■", line);
+        if (!line.isEmpty()) {
           String[] col = line.split(",");
           this.dictionary.put(col[0], col[1]);
         }
-      }  
-    }catch(IOException e) {
+      }
+    } catch (IOException e) {
       e.printStackTrace();
     }
   }
-
 
   public String getDictionaryName() {
     return this.configuration.getDictionaryName();
   }
 
 }
-
