@@ -92,6 +92,12 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>aem-sdk-api</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.9</version>
+        </dependency>
+
 
         <!-- Testing -->
         <dependency>
@@ -142,12 +148,5 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>commons-io</artifactId>
             <version>2.11.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-text</artifactId>
-            <version>1.9</version>
-        </dependency>
-
     </dependencies>
 </project>

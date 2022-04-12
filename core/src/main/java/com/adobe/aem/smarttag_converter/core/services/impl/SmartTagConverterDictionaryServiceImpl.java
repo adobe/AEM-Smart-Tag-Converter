@@ -30,7 +30,7 @@ import java.io.StringReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.text.StringEscapeUtils;
 
 @Component(service = SmartTagConverterDictionaryService.class, immediate = true)
 @Designate(ocd = SmartTagConverterDictionaryConfig.class)
@@ -60,7 +60,7 @@ public class SmartTagConverterDictionaryServiceImpl implements SmartTagConverter
   @Override
   public String getConvertedString(String tag) {
     String translated = this.dictionary.get(tag);
-    return (translated != null) ? translated : StringEscapeUtils.escapeJavaScript(tag);
+    return (translated != null) ? translated : StringEscapeUtils.escapeEcmaScript(tag);
   }
 
   @Override
